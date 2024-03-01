@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Donegal+One&family=Overlock&display=swap');
+
+body{
+    margin:0%;
+}
+
+h1,h2,h3{
+    font-family: 'Donegal One', serif;
+    color: black;
+}
+p{
+    font-family: 'Overlock', cursive;
+    color:#333;
+}
+
+li a{
+    text-decoration: none;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+header{
+    display: block;
+    background-color: rgba(93,159,228,0.3);
+    padding-top: 1rem;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+    padding: 1rem;
+}
+
+h2{
+    text-align: center;
+}
+
+.site-nav{
+    text-align: center;
+    background-color: rgba(255,255,255,0.3);
+    padding: 0.5rem;
+}
+
+.site-nav li{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2rem;
+    font-size: 16px;
+}
+
+.site-nav li a{
+    color: rgba(43, 177, 234, 1);
+}
+
+.welcome{
+    text-align: center;
+    padding: 2rem;
+}
+
+.welcome-top{
+    margin-top: 5rem;
+}
+
+.welcome-bottom{
+    margin-bottom: 7rem;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#about-me{
+    background-color: rgba(213, 214, 234,0.7);
+    margin:3rem;
+    padding: 1rem;
+    border-radius:25px;
+}
+
+#projects li a{
+    color: rgba(235, 143, 166,1);
+}
+
+#labs li a{
+    color: rgba(75, 128, 99, 1)
+}
+
+#projects, #labs{
+    padding: 1rem;
+    margin: 0 2rem 2rem 2rem;
+    border-radius: 25px;
+
+}
+
+#projects{
+    background-color: rgba(243, 221, 242,0.7);
+}
+
+#labs{
+    background-color: rgba(215, 236, 217,0.7);
+}
+
+#projects li, #labs li{
+    text-align: left;
+}
+
+footer{
+    background-color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:1rem;
+}
+footer h3{
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 720px) {
+    h2{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 18px;
+    }
+    li{
+        font-size: 18px;
+    }
+    .site-nav li{
+        font-size: 18px;
+    }
+
+    .work{
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'projects-h2 labs-h2'
+        'projects labs';
+    }
+    .projects-h2{
+        grid-area: projects-h2;
+    }
+    .labs-h2{
+        grid-area: labs-h2;
+    }
+    #projects{
+        grid-area: projects;
+    }
+    #labs{
+        grid-area: labs;
+    }
+    
+} 
+
+@media screen and (min-width: 1000px) {
+    h1{
+        font-size: 3rem;
+        text-align: left;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 20px;
+    }
+    li{
+        font-size: 20px;
+    }
+    .site-nav{
+        text-align: right;
+    }
+    .site-nav li{
+        font-size: 20px;
+        padding-left: 3rem;
+    }
+
+    main{
+        display: grid;
+        grid-template-areas:
+        'welcome welcome'
+        'aside work'
+    }
+
+    aside{
+        grid-area: aside;
+    }
+    .welcome{
+        grid-area: welcome;
+    }
+    .work{
+        grid-area: work;
+        margin-bottom: 4rem;
+    }
+
+    footer{
+        font-size: 20px;
+    }
+}
